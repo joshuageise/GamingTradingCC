@@ -25,13 +25,11 @@ public class main extends AbstractScript {
 		table = new Hashtable<String, String>();
 		table.put("0", "Bones");
 		table.put("1", "Egg");
-		table.put("SOF", "Tinderbox");
 		table.put("EOF", "Pot");
 		
 		reverse = new Hashtable<String, String>();
 		reverse.put("Bones", "0");
 		reverse.put("Egg", "1");
-		reverse.put("Tinderbox", "SOF");
 		reverse.put("Pot", "EOF");
 	}
 
@@ -71,10 +69,6 @@ public class main extends AbstractScript {
 			
 			// prepare for sending data - get binary string
 			String binary = new String("0110100001101001");
-			
-			// add SOF item
-			String sof = table.get("SOF");
-			items.add(sof);
 			
 			// loop through binary string
 			for (int i = 0; i < binary.length(); i++) {
